@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Welcome back, Jonas</h1>
+      <div class="logo"></div>
+      <form action="" class="sign-in">
+        <input type="text" required name="username" placeholder="user" />
+        <input type="text" required name="pin" placeholder="PIN" />
+        <button type="submit">&rightarrow;</button>
+      </form>
+    </header>
+
+    <main>
+      <div class="container">
+        <header class="app-header">
+          <div>
+            <h2 class="bal-text">Current balance</h2>
+            <p class="date">As of 05/02/2017</p>
+          </div>
+          <h2 class="balance">3840&euro;</h2>
+        </header>
+        <div class="grid layout">
+          <div class="history"></div>
+          <div class="actions">
+            <form action="" class="transfer">
+              <h3 class="form-title">Transfer money</h3>
+              <div class="grid grid-3-col action">
+                <div class="input-group">
+                  <input type="text" id="t-recepient" required />
+                  <label class="label" for="t-recepient">Transfer to</label>
+                </div>
+                <div class="input-group">
+                  <input type="number" id="t-amount" required />
+                  <label class="label" for="t-amount">Amount</label>
+                </div>
+
+                <button class="confirm">&rightarrow;</button>
+              </div>
+            </form>
+
+            <form action="" class="loan">
+              <h3 class="form-title">Request loan</h3>
+              <div class="action grid grid-2-col">
+                <div class="input-group">
+                  <input type="number" id="l-amount" required />
+                  <label class="label" for="l-amount">Amount</label>
+                </div>
+                <button class="confirm">&rightarrow;</button>
+              </div>
+            </form>
+
+            <form action="" class="close-account">
+              <h3 class="form-title">Close account</h3>
+              <div class="action grid grid-3-col">
+                <div class="input-group">
+                  <input type="text" id="user" required />
+                  <label class="label" for="user">Confirm user</label>
+                </div>
+                <div class="input-group">
+                  <input type="text" id="pin" required />
+                  <label class="label" for="pin">Confirm PIN</label>
+                </div>
+                <button class="confirm">&rightarrow;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

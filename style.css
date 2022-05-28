@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 55%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/*--------------*/
+/* Heading  */
+
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #999, #f4f4f4);
+}
+
+.main-header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-in {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in > input {
+  text-align: center;
+  width: 9rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+form *:focus {
+  outline: none;
+  offset: 8px;
+  box-shadow: 0 0 0 0.6rem #ececec;
+}
+
+.sign-in button {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  /* text-align: center; */
+  /* margin: auto 0; */
+  transform: translateY(-15%);
+}
+
+/*--------------*/
+/* Main  */
+
+main {
+  padding: 3rem 0;
+}
+
+/* App header  */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.bal-text {
+  font-size: 1.9rem;
+}
+
+.date {
+  font-size: 1.4rem;
+}
+
+.balance {
+  font-size: 3.7rem;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+}
+
+.layout {
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 1.7rem;
+}
+
+.history {
+  background: #fff;
+  border-radius: 1rem;
+}
+
+/* Actions Form */
+.form-title {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.actions form {
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.actions form input {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+.action {
+  font-size: 1.4rem;
+  text-align: center;
+  align-items: start;
+  /* justify-content: space-between; */
+  gap: 1rem;
+}
+
+.grid-3-col {
+  grid-template-columns: 40% 40% 10%;
+}
+
+.grid-2-col {
+  grid-template-columns: 40% 10%;
+}
+
+.confirm {
+  background: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  height: 50%;
+}
+
+.actions input {
+  border: none;
+  height: 2.3rem;
+  border-radius: 0.7rem;
+  background: #f4f4f47c;
+}
+
+.transfer {
+  background: #ffc400;
+}
+
+.loan {
+  background: linear-gradient(to bottom right, #1bce1bb2, #008000ad);
+}
+
+.close-account {
+  background: linear-gradient(to bottom right, #ff00629d, #ff0062);
+}
