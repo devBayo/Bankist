@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 110rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -52,7 +52,7 @@ body {
   border: none;
 }
 
-form *:focus {
+.sign-in *:focus {
   outline: none;
   offset: 8px;
   box-shadow: 0 0 0 0.6rem #ececec;
@@ -100,7 +100,7 @@ main {
 }
 
 .layout {
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   column-gap: 1.7rem;
 }
 
