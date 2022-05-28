@@ -100,12 +100,24 @@ main {
 
 .layout {
   grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 44rem;
   column-gap: 1.7rem;
 }
 
-.history {
+/* History */
+.histories {
   background: #fff;
   border-radius: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.history {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 4rem;
 }
 
 /* Actions Form */
