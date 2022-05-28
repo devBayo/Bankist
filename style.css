@@ -31,7 +31,7 @@ body {
 }
 
 .main-header {
-  padding: 2rem;
+  padding: 3rem 2rem 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,24 +46,23 @@ body {
 
 .sign-in > input {
   text-align: center;
-  width: 9rem;
-  height: 2.5rem;
-  border-radius: 1rem;
+  width: 12rem;
+  height: 3.5rem;
+  border-radius: 2rem;
   border: none;
+  font-size: 1.6rem;
 }
 
 .sign-in *:focus {
   outline: none;
   offset: 8px;
-  box-shadow: 0 0 0 0.6rem #ececec;
+  box-shadow: 0 0 0 1px #ececec;
 }
 
 .sign-in button {
   background: none;
   border: none;
   font-size: 3rem;
-  /* text-align: center; */
-  /* margin: auto 0; */
   transform: translateY(-15%);
 }
 
@@ -130,7 +129,7 @@ main {
   display: block;
   text-align: center;
   width: 100%;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
 .action {
