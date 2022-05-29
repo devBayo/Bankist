@@ -179,6 +179,12 @@ main {
   text-align: center;
   width: 100%;
   margin-bottom: 0.6rem;
+  transition: all 0.3s;
+}
+
+.actions form input:focus{
+  outline: none;
+  background: #f4f4f4af;
 }
 
 label {
