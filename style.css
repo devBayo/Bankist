@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 * {
   padding: 0;
@@ -14,6 +14,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   color: #444444e5;
   background: #f4f4f4;
+  font-weight: 600;
 }
 
 .container {
@@ -102,7 +103,7 @@ main {
 
 .balance {
   font-size: 3.7rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .grid {
@@ -140,7 +141,6 @@ main {
   padding: 0.3rem 1rem;
   font-size: 1.5rem;
   border-radius: 2rem;
-  font-weight: 500;
 }
 
 .tag--deposit {
