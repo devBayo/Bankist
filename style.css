@@ -8,6 +8,7 @@
 
 html {
   font-size: 55%;
+  overflow: hidden;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   color: #444444e5;
   background: #f4f4f4;
   font-weight: 500;
+  overflow: hidden;
 }
 
 .container {
@@ -23,6 +25,12 @@ body {
   padding: 0 1rem;
 }
 
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(100%);
+}
 /*--------------*/
 /* Heading  */
 
@@ -84,6 +92,8 @@ h1 {
 
 main {
   padding: 3rem 0;
+  transition: all 0.7s;
+  transform: translateY(0);
 }
 
 /* App header  */
