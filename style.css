@@ -134,7 +134,7 @@ main {
 }
 
 .tag--withdrawal {
-  background: linear-gradient(to bottom right, #ff00629d, #ff0062);
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 
 .amount {
@@ -204,5 +204,5 @@ main {
 }
 
 .close-account {
-  background: linear-gradient(to bottom right, #ff00629d, #ff0062);
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
 }
