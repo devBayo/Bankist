@@ -90,15 +90,16 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .bal-text {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 
 .date {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  color: #999;
 }
 
 .balance {
