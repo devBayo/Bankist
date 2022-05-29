@@ -14,7 +14,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   color: #444444e5;
   background: #f4f4f4;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .container {
@@ -31,8 +31,8 @@ h1 {
 }
 
 .logo {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3.7rem;
+  width: 3.7rem;
   border-radius: 50%;
   background: linear-gradient(to bottom right, #999, #f4f4f4);
 }
@@ -59,6 +59,7 @@ h1 {
   border: none;
   font-size: 1.6rem;
   color: inherit;
+  transition: all 0.3s;
 }
 
 .sign-in > input::placeholder {
@@ -68,7 +69,7 @@ h1 {
 .sign-in *:focus {
   outline: none;
   offset: 8px;
-  box-shadow: 0 0 0 1px #ececec;
+  box-shadow: inset 0 0 0 2px #ececec;
 }
 
 .sign-in button {
@@ -142,6 +143,7 @@ main {
   padding: 0.3rem 1rem;
   font-size: 1.5rem;
   border-radius: 2rem;
+  font-weight: 600;
 }
 
 .tag--deposit {
