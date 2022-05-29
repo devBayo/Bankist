@@ -25,6 +25,10 @@ body {
 /*--------------*/
 /* Heading  */
 
+h1 {
+  font-size: 2.1rem;
+}
+
 .logo {
   height: 3.5rem;
   width: 3.5rem;
