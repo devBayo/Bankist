@@ -113,7 +113,7 @@ main {
 }
 
 .layout {
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   grid-template-rows: 44rem;
   column-gap: 1.7rem;
 }
