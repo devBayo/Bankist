@@ -121,6 +121,10 @@ main {
   padding: 3rem 4rem;
 }
 
+.history:not(:last-child){
+  border-bottom: 1px solid #f1f1f1;
+}
+
 .tag {
   color: #fff;
   padding: 0.3rem 1rem;
