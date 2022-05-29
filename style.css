@@ -211,7 +211,7 @@ label {
   background: #fff;
   border: none;
   border-radius: 0.5rem;
-  height: 50%;
+  font-size: 2rem;
 }
 
 .actions input {
