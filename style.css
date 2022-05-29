@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-family: sans-serif;
+  color: #444;
   background: #f4f4f4;
 }
 
@@ -51,6 +51,7 @@ body {
   border-radius: 2rem;
   border: none;
   font-size: 1.6rem;
+  color: inherit;
 }
 
 .sign-in *:focus {
@@ -118,6 +119,26 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 3rem 4rem;
+}
+
+.tag {
+  color: #fff;
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  /* font-weight: 500; */
+}
+
+.tag--deposit {
+  background: linear-gradient(to bottom right, #1bce1bb2, #008000ad);
+}
+
+.tag--withdrawal {
+  background: linear-gradient(to bottom right, #ff00629d, #ff0062);
+}
+
+.amount {
+  font-size: 2rem;
 }
 
 /* Actions Form */
