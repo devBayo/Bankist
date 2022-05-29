@@ -166,6 +166,7 @@ main {
 
 .actions {
   display: grid;
+  grid-template-rows: repeat(3, 1fr);
   gap: 1.7rem;
 }
 
@@ -182,7 +183,7 @@ main {
   transition: all 0.3s;
 }
 
-.actions form input:focus{
+.actions form input:focus {
   outline: none;
   background: #f4f4f4af;
 }
