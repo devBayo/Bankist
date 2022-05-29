@@ -120,7 +120,7 @@ main {
 /* History */
 .histories {
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ main {
 }
 
 .tag--withdrawal {
-  background: linear-gradient(to top left, #e52a5a, #ff585f);
+  background: linear-gradient(to bottom right, #e52a5a, #ff585f);
 }
 
 .amount {
@@ -158,18 +158,17 @@ main {
 
 /* Actions Form */
 .form-title {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   margin-bottom: 1rem;
 }
 
 .actions {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.7rem;
 }
 
 .actions form {
-  padding: 3rem;
+  padding: 2.2rem 3rem;
   border-radius: 1rem;
 }
 
@@ -180,11 +179,14 @@ main {
   margin-bottom: 0.6rem;
 }
 
+label {
+  font-size: 1.6rem;
+}
+
 .action {
   font-size: 1.4rem;
   text-align: center;
   align-items: start;
-  /* justify-content: space-between; */
   gap: 1rem;
 }
 
@@ -219,5 +221,5 @@ main {
 }
 
 .close-account {
-  background: linear-gradient(to top left, #e52a5a, #ff585f);
+  background: linear-gradient(to bottom right, #e52a5a, #ff585f);
 }
