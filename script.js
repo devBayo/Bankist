@@ -3,8 +3,8 @@
 //Targetting Elements
 // Common elements
 const labelWelcome = document.querySelector('h1');
-const containerApp = document.querySelector('main');
-const containerHistory = document.querySelector('.histories');
+const appContainer = document.querySelector('main');
+const historyContainer = document.querySelector('.histories');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance');
 
@@ -64,16 +64,21 @@ const createUsername = accs => {
 
 createUsername(accounts);
 
+// Logic to display each transaction
 const displayHistory = acc => {
-  acc.movements.forEach(movement, i => {
-    const tag = movement > 0 ? 'deposit' : 'wthdrawal';
+  historyContainer.innerHTML = '';
+  acc.movements.forEach((movement, i) => {
+    const tag = movement > 0 ? 'deposit' : 'withdrawal';
     const html = ` 
     <li class="history">
       <p class="tag tag--${tag}">${i + 1} ${tag}</p>
+      <p class="trans-date">12/07/2022</p>
       <p class="amount">${movement}&euro;</p>
     </li>`;
+    historyContainer.insertAdjacentHTML('afterbegin', html);
   });
 };
+displayHistory(account1);
 //
 
 // Event Handlers
