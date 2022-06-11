@@ -7,6 +7,10 @@ const appContainer = document.querySelector('main');
 const historyContainer = document.querySelector('.histories');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance');
+const labelIncome = document.querySelector('.income');
+const labelExpense = document.querySelector('.expense');
+const labelInterest = document.querySelector('.interest');
+const labelTime = document.querySelector('.time');
 
 // input fields
 const inputLoginUsername = document.querySelector('.user');
@@ -86,6 +90,14 @@ const calcDisplayBalance = acc => {
   labelBalance.textContent = `${acc.balance}€`;
 };
 calcDisplayBalance(account1);
+
+// Logic to display summary
+const displaySummary = acc => {
+  const income = acc.movements
+    .filter(mov => mov > 0)
+    .reduce((prev, curr) => prev + curr, 0);
+};
+displaySummary(account1);
 //
 
 // Event Handlers
