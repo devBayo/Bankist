@@ -50,7 +50,9 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
-// Functions
+/////////////// Functions
+
+// Logic to create username
 const createUsername = accs => {
   accs.forEach(acc => {
     acc.username = acc.owner
@@ -61,7 +63,6 @@ const createUsername = accs => {
 };
 
 createUsername(accounts);
-console.log(account1);
 //
 
 // Event Handlers
