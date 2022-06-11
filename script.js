@@ -81,7 +81,7 @@ const displayHistory = acc => {
     <li class="history">
       <p class="tag tag--${tag}">${i + 1} ${tag}</p>
       <p class="trans-date">12/07/2022</p>
-      <p class="amount">${movement}&euro;</p>
+      <p class="amount">${movement.toFixed(2)}&euro;</p>
     </li>`;
     historyContainer.insertAdjacentHTML('afterbegin', html);
   });
@@ -91,7 +91,7 @@ displayHistory(account1);
 // Logic to calculate balance
 const calcDisplayBalance = acc => {
   acc.balance = acc.movements.reduce((prev, curr) => prev + curr, 0);
-  labelBalance.textContent = `${acc.balance}€`;
+  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 calcDisplayBalance(account1);
 
@@ -100,15 +100,15 @@ const displaySummary = acc => {
   const income = acc.movements
     .filter(mov => mov > 0)
     .reduce((prev, curr) => prev + curr, 0);
-  labelIncome.textContent = `${income}€`;
+  labelIncome.textContent = `${income.toFixed(2)}€`;
 
   const expenses = acc.movements
     .filter(mov => mov < 0)
     .reduce((prev, curr) => prev + curr, 0);
-  labelExpenses.textContent = `${Math.abs(expenses)}€`;
+  labelExpenses.textContent = `${Math.abs(expenses).toFixed(2)}€`;
 
   const interest = income * (acc.interestRate / 100);
-  labelInterest.textContent = `${interest}€`
+  labelInterest.textContent = `${interest.toFixed(2)}€`
 };
 displaySummary(account1);
 //
