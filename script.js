@@ -107,7 +107,8 @@ const displaySummary = acc => {
     .reduce((prev, curr) => prev + curr, 0);
   labelExpenses.textContent = `${Math.abs(expenses)}€`;
 
-  // const interest = income
+  const interest = income * (acc.interestRate / 100);
+  labelInterest.textContent = `${interest}€`
 };
 displaySummary(account1);
 //
