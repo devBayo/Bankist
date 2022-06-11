@@ -63,6 +63,17 @@ const createUsername = accs => {
 };
 
 createUsername(accounts);
+
+const displayHistory = acc => {
+  acc.movements.forEach(movement, i => {
+    const tag = movement > 0 ? 'deposit' : 'wthdrawal';
+    const html = ` 
+    <li class="history">
+      <p class="tag tag--${tag}">${i + 1} ${tag}</p>
+      <p class="amount">${movement}&euro;</p>
+    </li>`;
+  });
+};
 //
 
 // Event Handlers

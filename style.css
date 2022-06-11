@@ -145,8 +145,9 @@ main {
 
 .history {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 3rem 4rem;
+  align-items: center;
 }
 
 .history:not(:last-child) {
@@ -169,8 +170,14 @@ main {
   background: linear-gradient(to bottom right, #e52a5a, #ff585f);
 }
 
+.trans-date {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+}
+
 .amount {
   font-size: 2rem;
+  margin-left: auto;
 }
 
 /* Actions Form */
