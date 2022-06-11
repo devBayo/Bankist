@@ -24,7 +24,7 @@
         <header class="app-header">
           <div>
             <h2 class="bal-text">Current balance</h2>
-            <p class="date">As of 05/02/2017</p>
+            <p class="date-text">As of <span class="date">05/02/2017</span></p>
           </div>
           <h2 class="balance">3840&euro;</h2>
         </header>
@@ -69,15 +69,25 @@
               <h3 class="form-title">Transfer money</h3>
               <div class="grid grid-3-col action">
                 <div class="input-group">
-                  <input type="text" id="t-recepient" required />
+                  <input
+                    type="text"
+                    class="transfer-to"
+                    id="t-recepient"
+                    required
+                  />
                   <label class="label" for="t-recepient">Transfer to</label>
                 </div>
                 <div class="input-group">
-                  <input type="number" id="t-amount" required />
+                  <input
+                    type="number"
+                    class="transfer-amount"
+                    id="t-amount"
+                    required
+                  />
                   <label class="label" for="t-amount">Amount</label>
                 </div>
 
-                <button class="confirm">&rightarrow;</button>
+                <button class="confirm btn-transfer">&rightarrow;</button>
               </div>
             </form>
 
@@ -85,10 +95,15 @@
               <h3 class="form-title">Request loan</h3>
               <div class="action grid grid-2-col">
                 <div class="input-group">
-                  <input type="number" id="l-amount" required />
+                  <input
+                    type="number"
+                    class="loan-amount"
+                    id="l-amount"
+                    required
+                  />
                   <label class="label" for="l-amount">Amount</label>
                 </div>
-                <button class="confirm">&rightarrow;</button>
+                <button class="confirm btn-loan">&rightarrow;</button>
               </div>
             </form>
 
@@ -96,14 +111,14 @@
               <h3 class="form-title">Close account</h3>
               <div class="action grid grid-3-col">
                 <div class="input-group">
-                  <input type="text" id="user" required />
+                  <input type="text" class="close-user" id="user" required />
                   <label class="label" for="user">Confirm user</label>
                 </div>
                 <div class="input-group">
-                  <input type="text" id="pin" required />
+                  <input type="text" class="close-pin" id="pin" required />
                   <label class="label" for="pin">Confirm PIN</label>
                 </div>
-                <button class="confirm">&rightarrow;</button>
+                <button class="confirm btn-close">&rightarrow;</button>
               </div>
             </form>
           </div>

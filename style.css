@@ -25,12 +25,12 @@ body {
   padding: 0 1rem;
 }
 
-.hidden {
+/* .hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateY(100%);
-}
+} */
 
 button:hover {
   cursor: pointer;
@@ -112,7 +112,7 @@ main {
   font-size: 2.2rem;
 }
 
-.date {
+.date-text {
   font-size: 1.7rem;
   color: #999;
 }

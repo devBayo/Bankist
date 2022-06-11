@@ -1,10 +1,29 @@
 'use strict';
 
-const title = document.querySelector('h1');
-const user = document.querySelector('.user');
-const pin = document.querySelector('.pin');
-const app = document.querySelector('main');
+//Targetting Elements
+// Common elements
+const labelWelcome = document.querySelector('h1');
+const containerApp = document.querySelector('main');
+const containerHistory = document.querySelector('.histories');
+const labelDate = document.querySelector('.date');
+const labelBalance = document.querySelector('.balance');
 
+// input fields
+const inputLoginUsername = document.querySelector('.user');
+const inputLoginPin = document.querySelector('.pin');
+const inputTransferTo = document.querySelector('.transfer-to');
+const inputTransferAmount = document.querySelector('.transfer-amount');
+const inputLoanAmount = document.querySelector('.loan-amount');
+const inputCloseUser = document.querySelector('.close-user');
+const inputClosePin = document.querySelector('.close-pin');
+
+// Buttons
+const btnLogin = document.querySelector('.login');
+const btnTransfer = document.querySelector('.btn-transfer');
+const btnLoan = document.querySelector('.btn-loan');
+const btnClose = document.querySelector('.btn-close');
+
+// Accounts
 const account1 = {
   user: 'John Doe',
   pin: 1111,
@@ -31,17 +50,24 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
+// Functions
 const shortenUser = function (username) {
   return `${username[0] + username[username.indexOf(' ') + 1]}`.toLowerCase();
 };
 
+//
+
+// Event Handlers
 document.querySelector('.login').addEventListener('click', function (event) {
   event.preventDefault();
-  if (user.value === shortenUser(account.user) && +pin.value === account.pin) {
+  if (
+    user.value === shortenUser(account1.user) &&
+    +pin.value === account1.pin
+  ) {
     app.classList.remove('hidden');
-    title.textContent = `Welcome back, ${account.user.slice(
+    labelWelcome.textContent = `Welcome back, ${account1.user.slice(
       0,
-      account.user.indexOf(' ')
+      account1.user.indexOf(' ')
     )}`;
     user.value = '';
     pin.value = '';
