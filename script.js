@@ -79,6 +79,13 @@ const displayHistory = acc => {
   });
 };
 displayHistory(account1);
+
+// Logic to calculate balance
+const calcDisplayBalance = acc => {
+  acc.balance = acc.movements.reduce((prev, curr) => prev + curr, 0);
+  labelBalance.textContent = `${acc.balance}€`;
+};
+calcDisplayBalance(account1);
 //
 
 // Event Handlers
