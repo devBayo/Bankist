@@ -25,25 +25,25 @@ const btnClose = document.querySelector('.btn-close');
 
 // Accounts
 const account1 = {
-  user: 'John Doe',
+  owner: 'John Doe',
   pin: 1111,
   movements: [200, -400, 5000, 3600, -7000, 1000],
 };
 
 const account2 = {
-  user: 'Mike Bellion',
+  owner: 'Mike Bellion',
   pin: 2222,
   movements: [4000, -6000, 3000, -2500, -7000, 10000],
 };
 
 const account3 = {
-  user: 'Adam Smith',
+  owner: 'Adam Smith',
   pin: 3333,
   movements: [20, -400, 500, 8000, -70, 1000],
 };
 
 const account4 = {
-  user: 'Samuel Jackson',
+  owner: 'Samuel Jackson',
   pin: 4444,
   movements: [1000, -300, -5000, 9000, -700, -1000],
 };
@@ -51,7 +51,17 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 // Functions
+const createUsername = accs => {
+  accs.forEach(acc => {
+    acc.username = acc.owner
+      .split(' ')
+      .map(name => name[0].toLowerCase())
+      .join('');
+  });
+};
 
+createUsername(accounts);
+console.log(account1);
 //
 
 // Event Handlers
