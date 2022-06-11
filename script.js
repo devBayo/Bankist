@@ -51,30 +51,7 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 // Functions
-const shortenUser = function (username) {
-  return `${username[0] + username[username.indexOf(' ') + 1]}`.toLowerCase();
-};
 
 //
 
 // Event Handlers
-document.querySelector('.login').addEventListener('click', function (event) {
-  event.preventDefault();
-  if (
-    user.value === shortenUser(account1.user) &&
-    +pin.value === account1.pin
-  ) {
-    app.classList.remove('hidden');
-    labelWelcome.textContent = `Welcome back, ${account1.user.slice(
-      0,
-      account1.user.indexOf(' ')
-    )}`;
-    user.value = '';
-    pin.value = '';
-  } else {
-    user.value = '';
-    pin.value = '';
-    alert('Invalid credentials');
-  }
-});
-user.value = '';
