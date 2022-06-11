@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bankist</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="main-header">
-      <h1>Log in to get started</h1>
+      <h1>Login to continue</h1>
       <div class="logo"></div>
-      <form action="" class="sign-in">
-        <input type="text" required name="username" placeholder="user" />
-        <input type="text" required name="pin" placeholder="PIN" />
-        <button type="submit">&rightarrow;</button>
+      <form class="sign-in" action="#" method="get">
+        <input type="text" class="user" placeholder="user" />
+        <input type="text" class="pin" placeholder="PIN" />
+        <button class="login" type="submit">&rightarrow;</button>
       </form>
     </header>
 
-    <main>
+    <main class="hidden">
       <div class="container">
         <!-- Header -->
         <header class="app-header">
@@ -106,6 +106,16 @@
                 <button class="confirm">&rightarrow;</button>
               </div>
             </form>
+          </div>
+          <div class="summary">
+            <p>IN <span class="tag--deposit">5020&euro;</span></p>
+            <p>OUT <span class="tag--withdrawal">1180&euro;</span></p>
+            <p>INTEREST <span class="tag--deposit">59.4&euro;</span></p>
+
+            <p class="sort">&downarrow; SORT</p>
+          </div>
+          <div class="logout-countdown">
+            <p>You will be logged out in <span class="time">5:00</span></p>
           </div>
         </div>
       </div>

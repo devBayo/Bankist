@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 55%;
+  font-size: 52%;
   overflow: hidden;
 }
 
@@ -30,6 +30,10 @@ body {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(100%);
+}
+
+button:hover {
+  cursor: pointer;
 }
 /*--------------*/
 /* Heading  */
@@ -92,7 +96,7 @@ h1 {
 
 main {
   padding: 3rem 0;
-  transition: all 0.7s;
+  transition: all 1s;
   transform: translateY(0);
 }
 
@@ -125,6 +129,7 @@ main {
 .layout {
   grid-template-columns: 1.3fr 1fr;
   grid-template-rows: 44rem;
+  row-gap: 1.5rem;
   column-gap: 1.7rem;
 }
 
@@ -241,4 +246,37 @@ label {
 
 .close-account {
   background: linear-gradient(to bottom right, #e52a5a, #ff585f);
+}
+
+.summary {
+  display: flex;
+  gap: 2rem;
+}
+
+.summary > p {
+  font-size: 1.4rem;
+}
+
+p.sort {
+  margin-left: auto;
+  margin-right: 3rem;
+  font-size: 1.6rem;
+}
+
+.sort:hover {
+  cursor: pointer;
+}
+
+span.tag--deposit,
+span.tag--withdrawal {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.logout-countdown {
+  justify-self: right;
+  font-size: 1.6rem;
 }
