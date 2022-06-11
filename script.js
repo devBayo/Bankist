@@ -8,7 +8,7 @@ const historyContainer = document.querySelector('.histories');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance');
 const labelIncome = document.querySelector('.income');
-const labelExpense = document.querySelector('.expense');
+const labelExpenses = document.querySelector('.expenses');
 const labelInterest = document.querySelector('.interest');
 const labelTime = document.querySelector('.time');
 
@@ -31,24 +31,28 @@ const btnClose = document.querySelector('.btn-close');
 const account1 = {
   owner: 'John Doe',
   pin: 1111,
+  interestRate: 1.2, // %
   movements: [200, -400, 5000, 3600, -7000, 1000],
 };
 
 const account2 = {
   owner: 'Mike Bellion',
   pin: 2222,
+  interestRate: 1.5,
   movements: [4000, -6000, 3000, -2500, -7000, 10000],
 };
 
 const account3 = {
   owner: 'Adam Smith',
   pin: 3333,
+  interestRate: 0.7,
   movements: [20, -400, 500, 8000, -70, 1000],
 };
 
 const account4 = {
   owner: 'Samuel Jackson',
   pin: 4444,
+  interestRate: 1,
   movements: [1000, -300, -5000, 9000, -700, -1000],
 };
 
@@ -96,6 +100,14 @@ const displaySummary = acc => {
   const income = acc.movements
     .filter(mov => mov > 0)
     .reduce((prev, curr) => prev + curr, 0);
+  labelIncome.textContent = `${income}€`;
+
+  const expenses = acc.movements
+    .filter(mov => mov < 0)
+    .reduce((prev, curr) => prev + curr, 0);
+  labelExpenses.textContent = `${Math.abs(expenses)}€`;
+
+  // const interest = income
 };
 displaySummary(account1);
 //
