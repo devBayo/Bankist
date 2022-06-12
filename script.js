@@ -111,11 +111,17 @@ const displaySummary = acc => {
   labelInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
-// Refactored functions call
+// Refactored function call
 const updateUI = acc => {
   calcDisplayBalance(acc);
   displayHistory(acc);
   displaySummary(acc);
+};
+
+const clearLogin = () => {
+  inputLoginPin.value = inputLoginUsername.value = '';
+  inputLoginPin.blur();
+  inputLoginUsername.blur();
 };
 
 const logout = function () {
@@ -144,21 +150,13 @@ btnLogin.addEventListener('click', function (e) {
     }`;
     updateUI(currentAccount);
     authContainer.classList.add('signed-in');
-    inputLoginPin.value = inputLoginUsername.value = '';
-    inputLoginPin.blur();
-    inputLoginUsername.blur();
+    clearLogin();
   } else {
     alert('invalid credentials');
-    inputLoginPin.value = inputLoginUsername.value = '';
-    inputLoginPin.blur();
-    inputLoginUsername.blur();
+    clearLogin();
   }
 });
-// const clearLogin = () => {
-//   inputLoginPin.value = inputLoginUsername.value = '';
-//   inputLoginPin.blur();
-//   inputLoginUsername.blur();
-// };
+
 // Login logic
 btnLogout.addEventListener('click', logout);
 
