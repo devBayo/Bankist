@@ -192,8 +192,10 @@ btnClose.addEventListener('click', function (e) {
     accounts[closeUserIndex] === currentAccount &&
     currentAccount.pin === +inputClosePin.value
   ) {
+    inputClosePin.value = inputCloseUser.value = '';
+    inputClosePin.blur();
+    inputCloseUser.blur();
     logout();
     accounts.splice(closeUserIndex, 1);
-    inputClosePin.value = inputCloseUser.value = '';
   }
 });
