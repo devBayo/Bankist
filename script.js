@@ -182,6 +182,19 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
+// Loan Logic
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (
+    currentAccount.movements.some(mov => mov >= +inputLoanAmount.value * 0.1) &&
+    +inputLoanAmount.value > 0
+  ) {
+    currentAccount.movements.push(+inputLoanAmount.value);
+    updateUI(currentAccount);
+    inputLoanAmount.value = '';
+  }
+});
+
 // Close Account Logic
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
