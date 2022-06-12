@@ -4,6 +4,7 @@
 // Common elements
 const labelWelcome = document.querySelector('h1');
 const appContainer = document.querySelector('main');
+const authContainer = document.querySelector('.auth');
 const historyContainer = document.querySelector('.histories');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance');
@@ -23,6 +24,7 @@ const inputClosePin = document.querySelector('.close-pin');
 
 // Buttons
 const btnLogin = document.querySelector('.login');
+const btnLogout = document.querySelector('.logout');
 const btnTransfer = document.querySelector('.btn-transfer');
 const btnLoan = document.querySelector('.btn-loan');
 const btnClose = document.querySelector('.btn-close');
@@ -115,20 +117,30 @@ const displaySummary = acc => {
 // Login logic
 let currentAccount;
 
-btnLogin.addEventListener('click', function () {
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
   // console.log(currentAccount);
   if (currentAccount?.pin === +inputLoginPin.value) {
     appContainer.classList.remove('hidden');
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
     calcDisplayBalance(currentAccount);
     displayHistory(currentAccount);
     displaySummary(currentAccount);
-
+    authContainer.classList.add('signed-in');
     inputLoginPin.value = inputLoginUsername.value = '';
     inputLoginPin.blur();
     inputLoginUsername.blur();
     btnLogin.blur();
   }
+});
+
+btnLogout.addEventListener('click', function () {
+  authContainer.classList.remove('signed-in');
+  appContainer.classList.add('hidden');
+  labelWelcome.textContent = 'Login to continue';
 });

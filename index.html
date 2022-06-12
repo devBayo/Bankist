@@ -11,11 +11,17 @@
     <header class="main-header">
       <h1>Login to continue</h1>
       <div class="logo"></div>
-      <form class="sign-in" action="#" method="get">
-        <input type="text" class="user" placeholder="user" />
-        <input type="text" class="pin" placeholder="PIN" />
-        <button class="login" type="submit">&rightarrow;</button>
-      </form>
+      <div class="auth">
+        <form class="sign-in" action="#" method="get">
+          <input type="text" class="user" placeholder="user" />
+          <input type="text" class="pin" placeholder="PIN" />
+          <button class="login" type="submit">&rightarrow;</button>
+        </form>
+        <button class="logout">
+          Logout
+          <ion-icon class="logout-icon" name="log-out-outline"></ion-icon>
+        </button>
+      </div>
     </header>
 
     <main class="hidden">
@@ -147,5 +153,6 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>

@@ -56,11 +56,63 @@ h1 {
   align-items: center;
 }
 
+.auth {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signed-in .sign-in {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.logout {
+  position: absolute;
+  right: 0;
+
+  border: none;
+  background: linear-gradient(to top left, #39b385, #9be15d);
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  border-radius: 0.9rem;
+  transform: translateX(150%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logout-icon {
+  height: 2.6rem;
+  width: 2.6rem;
+  font-size: 2rem;
+}
+
+.signed-in .logout {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
 .sign-in {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  transition: all 1s;
 }
 
 .sign-in > input {
