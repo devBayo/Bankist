@@ -140,10 +140,18 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginPin.value = inputLoginUsername.value = '';
     inputLoginPin.blur();
     inputLoginUsername.blur();
-    btnLogin.blur();
+  } else {
+    alert('invalid credentials');
+    inputLoginPin.value = inputLoginUsername.value = '';
+    inputLoginPin.blur();
+    inputLoginUsername.blur();
   }
 });
-
+const clearLogin = () => {
+  inputLoginPin.value = inputLoginUsername.value = '';
+  inputLoginPin.blur();
+  inputLoginUsername.blur();
+};
 // Login logic
 btnLogout.addEventListener('click', function () {
   authContainer.classList.remove('signed-in');
@@ -171,4 +179,22 @@ btnTransfer.addEventListener('click', function (e) {
     inputTransferAmount.blur();
     inputTransferTo.blur();
   }
+});
+
+// Close Account Logic
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  const closeUserIndex = accounts.findIndex(
+    acc => acc.username === inputCloseUser.value
+  );
+  if (
+    accounts[closeUserIndex] === currentAccount &&
+    currentAccount.pin === +inputClosePin.value
+  ) {
+    authContainer.classList.remove('signed-in');
+    appContainer.classList.add('hidden');
+    labelWelcome.textContent = 'Login to continue';
+    accounts.splice(closeUserIndex, 1);
+  }
+  inputClosePin.value = inputCloseUser.value = '';
 });
