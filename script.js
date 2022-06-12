@@ -139,8 +139,33 @@ btnLogin.addEventListener('click', function (e) {
   }
 });
 
+// Login logic
 btnLogout.addEventListener('click', function () {
   authContainer.classList.remove('signed-in');
   appContainer.classList.add('hidden');
   labelWelcome.textContent = 'Login to continue';
+});
+
+// Transfer Logic
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const recepient = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  const transferAmount = +inputTransferAmount.value;
+  if (
+    recepient &&
+    currentAccount.balance >= transferAmount &&
+    transferAmount > 0 &&
+    currentAccount !== recepient
+  ) {
+    currentAccount.movements.push(-transferAmount);
+    recepient.movements.push(transferAmount);
+    calcDisplayBalance(currentAccount);
+    displayHistory(currentAccount);
+    displaySummary(currentAccount);
+    inputTransferAmount.value = inputTransferTo.value = '';
+    inputTransferAmount.blur();
+    inputTransferTo.blur();
+  }
 });
