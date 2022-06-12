@@ -157,7 +157,7 @@ btnLogin.addEventListener('click', function (e) {
   }
 });
 
-// Login logic
+// Logout logic
 btnLogout.addEventListener('click', logout);
 
 // Transfer Logic
