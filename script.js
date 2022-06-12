@@ -110,6 +110,13 @@ const displaySummary = acc => {
   const interest = income * (acc.interestRate / 100);
   labelInterest.textContent = `${interest.toFixed(2)}€`;
 };
+
+// Refactored functions call
+const updateUI = acc => {
+  calcDisplayBalance(acc);
+  displayHistory(acc);
+  displaySummary(acc);
+};
 //
 
 // Event Handlers
@@ -128,9 +135,7 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
     }`;
-    calcDisplayBalance(currentAccount);
-    displayHistory(currentAccount);
-    displaySummary(currentAccount);
+    updateUI(currentAccount);
     authContainer.classList.add('signed-in');
     inputLoginPin.value = inputLoginUsername.value = '';
     inputLoginPin.blur();
@@ -161,9 +166,7 @@ btnTransfer.addEventListener('click', function (e) {
   ) {
     currentAccount.movements.push(-transferAmount);
     recepient.movements.push(transferAmount);
-    calcDisplayBalance(currentAccount);
-    displayHistory(currentAccount);
-    displaySummary(currentAccount);
+    updateUI(currentAccount);
     inputTransferAmount.value = inputTransferTo.value = '';
     inputTransferAmount.blur();
     inputTransferTo.blur();
