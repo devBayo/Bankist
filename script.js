@@ -86,14 +86,12 @@ const displayHistory = acc => {
     historyContainer.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayHistory(account1);
 
 // Logic to calculate balance
 const calcDisplayBalance = acc => {
   acc.balance = acc.movements.reduce((prev, curr) => prev + curr, 0);
   labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
-calcDisplayBalance(account1);
 
 // Logic to display summary
 const displaySummary = acc => {
@@ -108,9 +106,29 @@ const displaySummary = acc => {
   labelExpenses.textContent = `${Math.abs(expenses).toFixed(2)}€`;
 
   const interest = income * (acc.interestRate / 100);
-  labelInterest.textContent = `${interest.toFixed(2)}€`
+  labelInterest.textContent = `${interest.toFixed(2)}€`;
 };
-displaySummary(account1);
 //
 
 // Event Handlers
+
+// Login logic
+let currentAccount;
+
+btnLogin.addEventListener('click', function () {
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  // console.log(currentAccount);
+  if (currentAccount?.pin === +inputLoginPin.value) {
+    appContainer.classList.remove('hidden');
+    calcDisplayBalance(currentAccount);
+    displayHistory(currentAccount);
+    displaySummary(currentAccount);
+
+    inputLoginPin.value = inputLoginUsername.value = '';
+    inputLoginPin.blur();
+    inputLoginUsername.blur();
+    btnLogin.blur();
+  }
+});
