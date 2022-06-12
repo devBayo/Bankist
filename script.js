@@ -117,6 +117,13 @@ const updateUI = acc => {
   displayHistory(acc);
   displaySummary(acc);
 };
+
+const logout = function () {
+  labelWelcome.textContent = 'Log in to continue';
+  authContainer.classList.remove('signed-in');
+  appContainer.classList.add('hidden');
+};
+
 //
 
 // Event Handlers
@@ -147,17 +154,13 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.blur();
   }
 });
-const clearLogin = () => {
-  inputLoginPin.value = inputLoginUsername.value = '';
-  inputLoginPin.blur();
-  inputLoginUsername.blur();
-};
+// const clearLogin = () => {
+//   inputLoginPin.value = inputLoginUsername.value = '';
+//   inputLoginPin.blur();
+//   inputLoginUsername.blur();
+// };
 // Login logic
-btnLogout.addEventListener('click', function () {
-  authContainer.classList.remove('signed-in');
-  appContainer.classList.add('hidden');
-  labelWelcome.textContent = 'Login to continue';
-});
+btnLogout.addEventListener('click', logout);
 
 // Transfer Logic
 btnTransfer.addEventListener('click', function (e) {
@@ -191,10 +194,8 @@ btnClose.addEventListener('click', function (e) {
     accounts[closeUserIndex] === currentAccount &&
     currentAccount.pin === +inputClosePin.value
   ) {
-    authContainer.classList.remove('signed-in');
-    appContainer.classList.add('hidden');
-    labelWelcome.textContent = 'Login to continue';
+    logout();
     accounts.splice(closeUserIndex, 1);
+    inputClosePin.value = inputCloseUser.value = '';
   }
-  inputClosePin.value = inputCloseUser.value = '';
 });
