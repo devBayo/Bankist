@@ -86,9 +86,9 @@ const displayHistory = (acc, sort = false) => {
     const html = ` 
     <li class="history">
       <p class="tag tag--${tag}">${i + 1} ${tag}</p>
-      <p class="trans-date">12/07/2022</p>
       <p class="amount">${movement.toFixed(2)}&euro;</p>
-    </li>`;
+      </li>`;
+    // <p class="trans-date">12/07/2022</p>
     historyContainer.insertAdjacentHTML('afterbegin', html);
   });
 };
