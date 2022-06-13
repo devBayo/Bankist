@@ -152,6 +152,9 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
     }`;
+    labelDate.textContent = Intl.DateTimeFormat(navigator.language).format(
+      new Date()
+    );
     updateUI(currentAccount);
     authContainer.classList.add('signed-in');
     clearLogin();
