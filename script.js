@@ -75,9 +75,10 @@ const createUsername = accs => {
 createUsername(accounts);
 
 // Logic to display each transaction
-const displayHistory = acc => {
+const displayHistory = (acc, sort = false) => {
   historyContainer.innerHTML = '';
-  acc.movements.forEach((movement, i) => {
+  movs = sort ? acc.movements.slice().sort((a, b) => a - b) : acc.movements;
+  movs.forEach((movement, i) => {
     const tag = movement > 0 ? 'deposit' : 'withdrawal';
     const html = ` 
     <li class="history">
