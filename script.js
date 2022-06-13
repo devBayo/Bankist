@@ -28,6 +28,7 @@ const btnLogout = document.querySelector('.logout');
 const btnTransfer = document.querySelector('.btn-transfer');
 const btnLoan = document.querySelector('.btn-loan');
 const btnClose = document.querySelector('.btn-close');
+const btnSort = document.querySelector('.sort');
 
 // Accounts
 const account1 = {
@@ -77,7 +78,9 @@ createUsername(accounts);
 // Logic to display each transaction
 const displayHistory = (acc, sort = false) => {
   historyContainer.innerHTML = '';
-  movs = sort ? acc.movements.slice().sort((a, b) => a - b) : acc.movements;
+  const movs = sort
+    ? acc.movements.slice().sort((a, b) => a - b)
+    : acc.movements;
   movs.forEach((movement, i) => {
     const tag = movement > 0 ? 'deposit' : 'withdrawal';
     const html = ` 
@@ -194,6 +197,13 @@ btnLoan.addEventListener('click', function (e) {
     updateUI(currentAccount);
     inputLoanAmount.value = '';
   }
+});
+
+// Logic for sort
+let sorted = false;
+btnSort.addEventListener('click', function () {
+  displayHistory(currentAccount, !sorted);
+  sorted = !sorted;
 });
 
 // Close Account Logic
