@@ -30,6 +30,10 @@ const btnLoan = document.querySelector('.btn-loan');
 const btnClose = document.querySelector('.btn-close');
 const btnSort = document.querySelector('.sort');
 
+// will be updated soon
+/////// accounts
+
+
 // Accounts
 const account1 = {
   owner: 'John Doe',
