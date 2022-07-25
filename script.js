@@ -37,6 +37,7 @@ class Account {}
 
 
 // Accounts
+
 const account1 = {
   owner: 'John Doe',
   pin: 1111,
