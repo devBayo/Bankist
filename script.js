@@ -22,7 +22,7 @@ const inputLoanAmount = document.querySelector('.loan-amount');
 const inputCloseUser = document.querySelector('.close-user');
 const inputClosePin = document.querySelector('.close-pin');
 
-// Buttons
+// Buttons 
 const btnLogin = document.querySelector('.login');
 const btnLogout = document.querySelector('.logout');
 const btnTransfer = document.querySelector('.btn-transfer');
@@ -32,7 +32,7 @@ const btnSort = document.querySelector('.sort');
 
 // will be updated soon
 /////// accounts
-//
+
 class Account {}
 
 
