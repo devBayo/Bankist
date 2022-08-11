@@ -33,7 +33,12 @@ const btnSort = document.querySelector('.sort');
 // will be updated soon
 /////// accounts
 
-class Account {}
+class Account {
+  constructor (owner, pin){
+    this.owner = owner
+    this.pin = pin
+  }
+}
 //
 
 
