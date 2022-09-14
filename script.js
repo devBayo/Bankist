@@ -34,6 +34,7 @@ const btnSort = document.querySelector('.sort');
 /////// accounts
 
 class Account {
+  #movement = []
   constructor (owner, pin){
     this.owner = owner
     this.pin = pin
