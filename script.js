@@ -22,7 +22,7 @@ const inputLoanAmount = document.querySelector('.loan-amount');
 const inputCloseUser = document.querySelector('.close-user');
 const inputClosePin = document.querySelector('.close-pin');
 
-// Buttons 
+// Buttons
 const btnLogin = document.querySelector('.login');
 const btnLogout = document.querySelector('.logout');
 const btnTransfer = document.querySelector('.btn-transfer');
@@ -30,18 +30,15 @@ const btnLoan = document.querySelector('.btn-loan');
 const btnClose = document.querySelector('.btn-close');
 const btnSort = document.querySelector('.sort');
 
-// will be updated soon
-/////// accounts
-
+/// Account Contructor
 class Account {
-  #movement = []
-  constructor (owner, pin){
-    this.owner = owner
-    this.pin = pin
+  #movement = [];
+  constructor(owner, pin) {
+    this.owner = owner;
+    this.pin = pin;
   }
 }
 //
-
 
 // Accounts
 
